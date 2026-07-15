@@ -100,12 +100,12 @@ Unit Testing
 
 ### Edit Todo
 
-![Add](screenshots/Edit.png)
+![Edit](screenshots/Edit.png)
 
 
 ### Details Todo
 
-![Add](screenshots/Details.png)
+![Details](screenshots/Details.png)
 
 ## Author
 
