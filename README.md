@@ -97,6 +97,16 @@ Unit Testing
 
 ![Add](screenshots/add.png)
 
+
+### Edit Todo
+
+![Add](screenshots/Edit.png)
+
+
+### Details Todo
+
+![Add](screenshots/Details.png)
+
 ## Author
 
 Sudheer Chilaka
