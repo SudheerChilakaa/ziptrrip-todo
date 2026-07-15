@@ -1,0 +1,248 @@
+{
+  "info": {
+    "_postman_id": "c9d1d7d7-1b4a-4d5a-9a2b-123456789abc",
+    "name": "Ziptrrip Todo API",
+    "description": "CRUD APIs for Ziptrrip Todo Application",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:5000/api"
+    },
+    {
+      "key": "todoId",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "Create Todo",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Learn React\",\n  \"description\": \"Complete Ziptrrip Assignment\",\n  \"priority\": \"High\",\n  \"status\": \"Pending\",\n  \"dueDate\": \"2026-07-30\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/todos",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "todos"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get All Todos",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/todos",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "todos"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Search Todos",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/todos?search=react",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "todos"
+          ],
+          "query": [
+            {
+              "key": "search",
+              "value": "react"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Filter By Status",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/todos?status=Pending",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "todos"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "Pending"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Filter By Priority",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/todos?priority=High",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "todos"
+          ],
+          "query": [
+            {
+              "key": "priority",
+              "value": "High"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Sort By Due Date",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/todos?sort=dueDate",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "todos"
+          ],
+          "query": [
+            {
+              "key": "sort",
+              "value": "dueDate"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Sort By Priority",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/todos?sort=priority",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "todos"
+          ],
+          "query": [
+            {
+              "key": "sort",
+              "value": "priority"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Pagination",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/todos?page=1&limit=5",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "todos"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "limit",
+              "value": "5"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Get Todo By Id",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "{{baseUrl}}/todos/{{todoId}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "todos",
+            "{{todoId}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Update Todo",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Learn MERN Stack\",\n  \"description\": \"Updated Description\",\n  \"priority\": \"Medium\",\n  \"status\": \"Completed\",\n  \"dueDate\": \"2026-08-01\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/todos/{{todoId}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "todos",
+            "{{todoId}}"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Delete Todo",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "{{baseUrl}}/todos/{{todoId}}",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "todos",
+            "{{todoId}}"
+          ]
+        }
+      }
+    }
+  ]
+}

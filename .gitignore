@@ -1,0 +1,27 @@
+# Node Modules
+node_modules/
+
+# Environment Variables
+.env
+backend/.env
+frontend/.env
+
+# Logs
+*.log
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Build
+dist/
+build/
+
+# Vite
+.vite/
+
+# VS Code
+.vscode/
+
+# Coverage
+coverage/
